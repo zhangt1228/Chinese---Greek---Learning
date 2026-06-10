@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="24" fill="#1f7667"/>
+  <circle cx="64" cy="64" r="44" fill="#fffaf2"/>
+  <text x="64" y="58" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" font-weight="700" fill="#1f7667">Γ</text>
+  <text x="64" y="88" text-anchor="middle" font-size="22" font-family="Arial, sans-serif" font-weight="700" fill="#221f1a">中</text>
+</svg>

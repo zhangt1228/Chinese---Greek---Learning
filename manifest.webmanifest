@@ -1,0 +1,17 @@
+{
+  "name": "希腊语慢慢学",
+  "short_name": "希腊语学习",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f8f4ec",
+  "theme_color": "#f6f0e6",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

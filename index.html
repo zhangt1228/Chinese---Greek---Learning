@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f7f1e8">
+    <meta name="description" content="给中文使用者学习标准现代希腊语的老人友好学习系统">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+    <title>希腊语慢慢学</title>
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">中文 · 标准现代希腊语</p>
+        <h1>希腊语慢慢学</h1>
+      </div>
+      <button class="icon-button" id="helpButton" type="button" aria-label="说明">?</button>
+    </header>
+
+    <main>
+      <section class="today-panel">
+        <div>
+          <p class="section-kicker">今日学习</p>
+          <h2 id="lessonTitle">希腊字母 1</h2>
+          <p id="lessonSummary">从最基础开始，一个字一个字学。</p>
+        </div>
+        <div class="progress-box">
+          <strong id="knownCount">0</strong>
+          <span>已认识</span>
+        </div>
+      </section>
+
+      <section class="daily-goal" aria-label="今日目标">
+        <div>
+          <p class="section-kicker">今日小目标</p>
+          <h2 id="dailyTitle">今天学 5 张就很好</h2>
+          <p id="dailyMessage">不追求快，记住一点就是进步。</p>
+        </div>
+        <div class="goal-meter" aria-hidden="true">
+          <span id="goalFill"></span>
+        </div>
+      </section>
+
+      <nav class="lesson-tabs" id="lessonTabs" aria-label="课程"></nav>
+
+      <section class="study-card" aria-live="polite">
+        <p class="card-count" id="cardCount">1 / 1</p>
+        <p class="greek-large" id="cardGreek">Α</p>
+        <p class="pron-large" id="cardPron">a</p>
+        <p class="meaning-large" id="cardMeaning">阿尔法</p>
+        <p class="note" id="cardNote">像英文 a。</p>
+        <div class="split-box" id="splitBox"></div>
+        <div class="main-actions">
+          <button id="prevCard" type="button">上一个</button>
+          <button id="playCard" type="button">播放</button>
+          <button id="nextCard" type="button">下一个</button>
+        </div>
+        <div class="main-actions">
+          <button id="markHard" class="secondary" type="button">需要复习</button>
+          <button id="markKnown" type="button">我认识了</button>
+        </div>
+      </section>
+
+      <section class="quiz-card" aria-live="polite">
+        <div>
+          <p class="section-kicker">轻松小测</p>
+          <h2 id="quizPrompt">看到中文，选希腊语</h2>
+          <p id="quizFeedback">答错也没关系，系统会帮你多复习。</p>
+        </div>
+        <div class="quiz-options" id="quizOptions"></div>
+        <button id="newQuiz" class="secondary" type="button">换一题</button>
+      </section>
+
+      <section class="tools-grid">
+        <button id="reviewButton" class="tool-card" type="button">
+          <span>复习本</span>
+          <strong id="reviewCount">0 个要复习</strong>
+        </button>
+        <button id="resetButton" class="tool-card danger" type="button">
+          <span>重新开始</span>
+          <strong>清空学习记录</strong>
+        </button>
+      </section>
+
+      <section class="search-panel" aria-label="词库搜索">
+        <label for="searchInput">搜索词库：中文、希腊语、英文、发音</label>
+        <div class="search-row">
+          <input id="searchInput" type="search" placeholder="例如：谢谢、药店、water、kalimera">
+          <button id="clearSearch" type="button">清除</button>
+        </div>
+      </section>
+
+      <section class="word-list" id="wordList" aria-live="polite"></section>
+    </main>
+
+    <dialog id="helpDialog">
+      <div class="dialog-content">
+        <h2>学习方式</h2>
+        <p>每天只需要学 5 张。看到会的点“我认识了”，不会的点“需要复习”。复习本会把难的内容留下来反复看。</p>
+        <p>小测验只帮助记忆，不惩罚答错。这个系统的目标是让人愿意每天回来，而不是一次学很多。</p>
+        <p>播放声音依赖手机浏览器的希腊语朗读能力；真正上线时可以换成真人录音或云端发音。</p>
+        <button id="closeHelp" type="button">知道了</button>
+      </div>
+    </dialog>
+
+    <template id="wordTemplate">
+      <article class="mini-card">
+        <button class="open-word" type="button">
+          <span class="mini-greek"></span>
+          <span class="mini-meaning"></span>
+          <span class="mini-pron"></span>
+        </button>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
